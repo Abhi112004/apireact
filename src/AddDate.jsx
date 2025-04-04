@@ -24,8 +24,8 @@ const AddDate = () => {
       .then(function (response) {
         if (response.data["status"] === "true") {
           alert("Data saved successfully");
-          localStorage.setItem("email", email);
-          naviget("/view");
+          // localStorage.setItem("email", email);
+          naviget("/");
         } else {
           alert("Error saving data");
         }

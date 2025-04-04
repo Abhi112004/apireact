@@ -12,15 +12,15 @@ root.render(
     <Header />
     <Routes>
       <Route path="/" element={<Login />} />
-      {localStorage.getItem("email") && (
-        <Route path="/View" element={<Home />} />
-      )}
-
+      {
+      localStorage.getItem("email") && 
+      <Route path="/View" element={<Home />} />
+      }
       <Route path="/insert" element={<AddDate />} />
-
-      {localStorage.getItem("email") && (
-        <Route path="/edit/:id" element={<EditDate />} />
-      )}
+      {
+      localStorage.getItem("email") && 
+      <Route path="/edit/:id" element={<EditDate />} />
+      }
     </Routes>
   </BrowserRouter>
 );
